@@ -5,8 +5,12 @@ const app = express();
 const port = 3000;
 const path = require('path');
 
+
+const route = require('./Routes');
+const db = require('./config/db/index');
 //S7
 
+db.connect();
 
 app.use(express.urlencoded({
   extended:true
@@ -15,6 +19,7 @@ app.use(express.json());
 
 
 app.use(express.static(path.join(__dirname,'publish')));
+
 //HTTP logger
 //app.use(morgan("combined"))
 
@@ -30,27 +35,7 @@ app.set('views',path.join(__dirname,'resources/views'));
 // trỏ vào thư mục
 //console.log("PATH:" + path.join(__dirname,'resources/views'))
 
-app.get('/', (req, res) => {
-  res.render('home');
- //res.render(namePage.handlebars)
-})
+route(app);
 
-app.get('/news', (req, res) => {
-  console.log(req.query.q);
-  res.render('news');
-})
-
-app.get('/search', (req, res) => {
-  res.render('search');
-})
-
-app.post('/search', (req, res) => {
-  res.render('search');
-})
-
-app.get('/estec', (req, res) => {
-  res.render('ESTEC');
-
-})
 
 app.listen(port,() => console.log(`App listening http://localhost:${port}`));

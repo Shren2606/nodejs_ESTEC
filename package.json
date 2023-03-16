@@ -23,6 +23,8 @@
     "express": "^4.18.2",
     "express-handlebars": "^7.0.2",
     "jsmodbus": "^4.0.6",
+    "mongodb": "^5.1.0",
+    "mongoose": "^6.10.3",
     "nodes7": "^0.3.18",
     "socket.io": "^4.6.1"
   },
