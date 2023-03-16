@@ -10,5 +10,5 @@ git push
 3/ index.js dò tìm nếu đúng cái path thì dẫn tới file Router tương ứng
 4/ file Router tương ứng dò các slug rồi dẫn đến file controller thực hiện các chức năng
 
-mongodb+srv://thien:thien@cluster0.zagj8b5.mongodb.net/?retryWrites=true&w=majority/ESTEC
-mongodb+srv://ESTEC:ESTEC@cluster0.8zgf5nk.mongodb.net/?retryWrites=true&w=majority/Estec_intern_dev/Estec
+mongodb+srv://thien:thien@cluster0.zagj8b5.mongodb.net
+mongodb+srv://ESTEC:ESTEC@cluster0.8zgf5nk.mongodb.net
